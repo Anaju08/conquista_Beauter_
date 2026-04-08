@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Conquista Beauter">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#fdf5ec">
+<title>Conquista de Clientes Beauter — Angela Moraes</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjZmRmNWVjIi8+PHRleHQgeD0iOTAiIHk9Ijc4IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2M5YTg0YyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiIGZvbnQtd2VpZ2h0PSI3MDAiPkROQTwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMTI4IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI0NCIgZmlsbD0iIzhhNjgyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXdlaWdodD0iNzAwIj5CPC90ZXh0Pjwvc3ZnPg==">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSIjZmRmNWVjIi8+PHRleHQgeD0iOTAiIHk9Ijc4IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2M5YTg0YyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiIGZvbnQtd2VpZ2h0PSI3MDAiPkROQTwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMTI4IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI0NCIgZmlsbD0iIzhhNjgyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXdlaWdodD0iNzAwIj5CPC90ZXh0Pjwvc3ZnPg==">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bege:     #fdf5ec;
+  --bege2:    #f5e8d5;
+  --bege3:    #ecdcc4;
+  --bege4:    #e4d0b4;
+  --gold:     #c9a84c;
+  --gold-l:   #e4c97e;
+  --gold-d:   #8a6820;
+  --gold-pale:#f7eed8;
+  --gold-soft:#f0e2c0;
+  --text:     #3a2c1a;
+  --text-soft:#6a5030;
+  --text-muted:#9a8060;
+  --radius:   22px;
+  --radius-sm:14px;
+  --shadow:   0 8px 40px rgba(138,104,32,0.10), 0 2px 10px rgba(201,168,76,0.10);
+  --shadow-sm:0 4px 20px rgba(138,104,32,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+input,textarea,select{font-size:19px!important;-webkit-appearance:none;appearance:none;}
+html{scroll-behavior:smooth;}
+body{background:var(--bege);color:var(--text);font-family:'Nunito',sans-serif;overflow-x:hidden;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.28;}
+.bg-glow{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 50% 10%,rgba(201,168,76,.07) 0%,transparent 70%),radial-gradient(ellipse 60% 40% at 10% 90%,rgba(201,168,76,.05) 0%,transparent 60%),radial-gradient(ellipse 50% 30% at 90% 60%,rgba(228,201,126,.04) 0%,transparent 60%);}
+
+/* SPLASH */
+#splash{position:fixed;inset:0;z-index:9999;background:linear-gradient(145deg,#fdf5ec 0%,#f7eed8 40%,#f0e2c0 75%,#ecdcc4 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity 1.4s ease,visibility 1.4s ease,transform 1.6s cubic-bezier(0.4,0,0.15,1);overflow:hidden;}
+#splash.hidden{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-100%);}
+#splash-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.spl{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:0 28px;}
+.spl-orn{animation:pIn .6s ease both;}
+.spl-top{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,3vw,19px);font-weight:600;letter-spacing:8px;text-transform:uppercase;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:pIn .7s .12s ease both;}
+.spl-main{font-family:'Cormorant Garamond',serif;font-size:clamp(55px,12vw,96px);font-weight:600;font-style:italic;letter-spacing:6px;line-height:.9;background:linear-gradient(135deg,var(--gold-d),var(--gold) 45%,var(--gold-l) 80%,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 14px rgba(201,168,76,.35));animation:pIn .7s .22s ease both;}
+.spl-divider{display:flex;align-items:center;gap:12px;animation:pIn .7s .38s ease both;}
+.spl-line{width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.spl-line:last-child{background:linear-gradient(90deg,var(--gold),transparent);}
+.spl-gem{color:var(--gold);font-size:12px;}
+.spl-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,3.5vw,23px);font-style:italic;color:var(--text-soft);letter-spacing:1px;animation:pIn .7s .48s ease both;}
+.spl-by{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,2.5vw,18px);font-style:italic;color:var(--text-muted);letter-spacing:3px;animation:pIn .7s .58s ease both;}
+.spl-bar{width:130px;height:2px;background:rgba(201,168,76,.18);border-radius:10px;overflow:hidden;animation:pIn .7s .65s ease both;margin-top:4px;}
+.spl-fill{height:100%;background:linear-gradient(90deg,var(--gold-d),var(--gold-l));animation:fillB 1.55s .32s ease forwards;width:0;}
+@keyframes fillB{from{width:0}to{width:100%}}
+@keyframes pIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+#sparkle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;}
+
+/* HERO */
+.hero{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px 100px;background:linear-gradient(160deg,#fdf5ec 0%,#f7eed8 30%,#f0e2c0 65%,#ecdcc4 100%);overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 50% at 25% 25%,rgba(201,168,76,.12) 0%,transparent 65%),radial-gradient(ellipse 55% 40% at 80% 75%,rgba(228,201,126,.10) 0%,transparent 65%);}
+.hero-orn-row{display:flex;align-items:center;gap:18px;margin-bottom:30px;position:relative;z-index:1;animation:floatY 5s ease-in-out infinite;}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);font-weight:400;font-style:italic;margin-bottom:16px;position:relative;z-index:1;display:flex;align-items:center;gap:12px;justify-content:center;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:22px;height:1px;background:rgba(138,104,32,.22);}
+.hero-title-wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;}
+.hero-t-label{display:none;}
+.hero-t1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,72px);font-weight:400;letter-spacing:10px;text-transform:uppercase;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-t2{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,9vw,96px);font-weight:300;letter-spacing:3px;line-height:1.1;}
+.hero-t2-de{background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;letter-spacing:10px;text-transform:uppercase;}
+.hero-t2-clientes{font-style:italic;color:#3d2310;-webkit-text-fill-color:#3d2310;text-shadow:0 1px 3px rgba(90,45,10,.18),0 0 12px rgba(180,130,80,.22);}
+.hero-t3{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,72px);font-weight:300;letter-spacing:10px;text-transform:uppercase;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:2px;}
+.hero-divider{display:flex;align-items:center;gap:14px;margin:24px 0;position:relative;z-index:1;}
+.hero-div-line{width:64px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.hero-div-line:last-child{background:linear-gradient(90deg,var(--gold),transparent);}
+.hero-div-gem{color:var(--gold);font-size:13px;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.8vw,29px);font-style:italic;color:var(--text-soft);line-height:1.7;margin-bottom:8px;position:relative;z-index:1;}
+.hero-by{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2.5vw,19px);font-style:italic;color:var(--text-muted);letter-spacing:3px;margin-bottom:36px;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,rgba(138,104,32,.85),rgba(201,168,76,.9),rgba(228,201,126,.85));color:#fff;padding:11px 32px;border-radius:50px;font-size:10px;letter-spacing:5px;text-transform:uppercase;font-weight:400;box-shadow:0 4px 20px rgba(138,104,32,.18);position:relative;z-index:1;animation:pulseGlow 3s ease-in-out infinite;}
+@keyframes pulseGlow{0%,100%{box-shadow:0 6px 24px rgba(201,168,76,.28)}50%{box-shadow:0 8px 36px rgba(201,168,76,.48),0 0 0 6px rgba(201,168,76,.08)}}
+.hero-pillars{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;}
+.pillar{display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,.35);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-sm);padding:12px 18px;backdrop-filter:blur(6px);}
+.pillar-label{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:4px;text-transform:uppercase;color:var(--gold-d);}
+
+/* WRAP */
+.wrap{position:relative;z-index:2;background:var(--bege);}
+.intro{position:relative;z-index:2;display:flex;justify-content:center;padding:60px 24px 32px;}
+.intro-box{background:linear-gradient(135deg,rgba(255,252,244,.96),rgba(247,238,216,.92));border:1px solid rgba(201,168,76,.28);border-radius:var(--radius);padding:32px 40px;text-align:center;max-width:600px;box-shadow:var(--shadow);position:relative;}
+.intro-box::before{content:'✦';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--bege);color:var(--gold);font-size:17px;padding:0 14px;}
+.intro-title{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--text);margin-bottom:12px;}
+.intro-text{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--text-soft);line-height:1.7;}
+
+/* MÓDULOS */
+.modules-wrap{position:relative;z-index:2;padding:16px 20px 64px;max-width:760px;margin:0 auto;}
+.section-label{font-size:11px;letter-spacing:4px;font-weight:700;color:var(--gold-d);text-transform:uppercase;text-align:center;margin-bottom:30px;}
+.mod-item{margin-bottom:12px;opacity:0;transform:translateY(28px);transition:opacity .5s ease,transform .55s cubic-bezier(.22,1,.36,1);}
+.mod-item.visible{opacity:1;transform:translateY(0);}
+
+.mod-btn{width:100%;background:linear-gradient(135deg,rgba(255,252,244,.98),rgba(247,238,216,.96));border:1px solid rgba(201,168,76,.25);border-radius:var(--radius);padding:0;cursor:pointer;text-align:left;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .3s;-webkit-tap-highlight-color:transparent;display:block;}
+.mod-btn-accent{position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:var(--radius) 0 0 var(--radius);background:linear-gradient(180deg,var(--gold),var(--gold-d));}
+.mod-btn:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(138,104,32,.12),0 0 0 1px rgba(201,168,76,.3);border-color:rgba(201,168,76,.45);}
+.mod-btn.open{border-color:rgba(201,168,76,.45);border-radius:var(--radius) var(--radius) 0 0;box-shadow:0 4px 20px rgba(138,104,32,.08);}
+.mod-btn-inner{display:flex;align-items:center;gap:14px;padding:20px 20px 20px 22px;}
+.mod-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:rgba(201,168,76,.22);line-height:1;flex-shrink:0;min-width:44px;transition:color .3s;}
+.mod-btn.open .mod-num,.mod-btn:hover .mod-num{color:rgba(138,104,32,.45);}
+.mod-text{flex:1;}
+.mod-tag{font-size:10px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--gold-d);margin-bottom:3px;display:block;}
+.mod-title{font-family:'Playfair Display',serif;font-size:clamp(18px,3.5vw,20px);font-weight:700;line-height:1.3;color:var(--text);}
+.mod-title em{font-style:italic;color:var(--gold-d);}
+.mod-sub{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--text-muted);margin-top:3px;display:block;}
+.mod-arrow{font-size:22px;color:var(--gold);flex-shrink:0;transition:transform .35s ease;opacity:.55;}
+.mod-btn.open .mod-arrow{transform:rotate(90deg);opacity:1;}
+.mod-body{display:none;background:linear-gradient(180deg,rgba(247,238,216,.55),rgba(253,245,236,.7));border:1px solid rgba(201,168,76,.22);border-top:none;border-radius:0 0 var(--radius) var(--radius);animation:bodySlide .3s ease;}
+.mod-btn.open+.mod-body{display:block;}
+@keyframes bodySlide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.mod-content{padding:20px 22px 22px;}
+.mod-intro-text{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.75;color:var(--text-soft);font-style:italic;margin-bottom:16px;padding:14px 18px;border-left:2px solid rgba(201,168,76,.4);background:rgba(255,255,255,.5);border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+.items-list{margin:14px 0;}
+.items-label{font-size:10px;letter-spacing:3px;font-weight:700;color:var(--gold-d);text-transform:uppercase;margin-bottom:10px;display:block;}
+.item-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(138,104,32,.07);font-size:16px;color:var(--text-soft);line-height:1.5;}
+.item-row:last-child{border-bottom:none;}
+.item-orn{color:var(--gold);font-size:11px;flex-shrink:0;margin-top:3px;}
+.example-block{background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(201,168,76,.04));border:1px solid rgba(201,168,76,.25);border-left:3px solid var(--gold);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;margin:14px 0;}
+.example-label{font-size:10px;letter-spacing:3px;font-weight:700;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;display:block;}
+.example-text{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--text-soft);line-height:1.65;}
+.insight-block{background:linear-gradient(135deg,rgba(247,238,216,.8),rgba(240,226,192,.6));border:1px solid rgba(201,168,76,.3);border-top:2px solid var(--gold);border-radius:var(--radius-sm);padding:18px 20px;margin:14px 0;}
+.insight-label{font-size:10px;letter-spacing:3px;font-weight:700;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;display:block;}
+.insight-text{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--text);line-height:1.55;}
+.insight-text em{color:var(--gold-d);font-style:italic;}
+.inspiracao-list{display:flex;flex-direction:column;gap:10px;margin:14px 0;}
+.inspiracao-item{background:rgba(255,255,255,.6);border:1px solid rgba(201,168,76,.22);border-radius:var(--radius-sm);padding:13px 16px;font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--text-soft);line-height:1.6;display:flex;align-items:flex-start;gap:10px;}
+.inspiracao-orn{color:var(--gold);font-size:12px;flex-shrink:0;margin-top:5px;}
+
+/* EXERCÍCIOS */
+.exercise-block{background:linear-gradient(135deg,rgba(255,252,248,.97),rgba(247,240,228,.92));border:1px solid rgba(201,168,76,.22);border-top:2px solid var(--gold);border-radius:var(--radius-sm);padding:20px 20px 22px;margin:14px 0;box-shadow:0 2px 14px rgba(138,104,32,.05);}
+.exercise-tag{font-size:10px;letter-spacing:3px;font-weight:700;color:var(--gold-d);text-transform:uppercase;margin-bottom:10px;display:block;}
+.exercise-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:14px;}
+
+/* CHECKBOXES — COM QUADRINHO VISÍVEL */
+.check-list{margin:8px 0;}
+.check-item{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:var(--radius-sm);font-size:16px;color:var(--text-soft);line-height:1.45;cursor:pointer;transition:background .18s;-webkit-tap-highlight-color:transparent;border:1px solid transparent;margin-bottom:5px;background:rgba(255,255,255,.5);}
+.check-item:hover{background:rgba(255,255,255,.85);border-color:rgba(201,168,76,.2);}
+.check-item input[type=checkbox]{
+  -webkit-appearance:checkbox !important;
+  appearance:checkbox !important;
+  width:17px;height:17px;min-width:17px;
+  cursor:pointer;flex-shrink:0;
+  margin:0;accent-color:var(--gold-d);
+  border:1.5px solid rgba(138,104,32,.4);
+  border-radius:4px;
+}
+.check-item label{cursor:pointer;flex:1;pointer-events:none;}
+.check-item.checked label{text-decoration:line-through;opacity:.48;}
+
+/* WRITE FIELDS */
+.write-label{font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:1px;margin:14px 0 6px;display:block;text-transform:uppercase;}
+.write-field{width:100%;background:rgba(255,255,255,.7);border:1px solid rgba(201,168,76,.2);border-bottom:2px solid rgba(201,168,76,.4);border-radius:var(--radius-sm) var(--radius-sm) 0 0;padding:10px 14px;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--text);outline:none;resize:none;transition:border-color .2s,background .2s;min-height:44px;}
+.write-field:focus{border-color:rgba(201,168,76,.5);background:rgba(255,255,255,.9);border-bottom-color:var(--gold);}
+.write-fields-row{display:flex;flex-direction:column;gap:7px;margin-top:10px;}
+.write-entry{display:flex;align-items:center;gap:10px;}
+.write-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:rgba(201,168,76,.35);flex-shrink:0;min-width:20px;}
+.write-input{flex:1;background:rgba(255,255,255,.6);border:none;border-bottom:1.5px solid rgba(201,168,76,.25);padding:8px 4px;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--text);outline:none;transition:border-color .2s;}
+.write-input:focus{border-bottom-color:var(--gold);background:rgba(255,255,255,.9);}
+
+/* CAMPANHAS */
+.campanha-options{display:flex;flex-direction:column;gap:7px;margin:10px 0;}
+.camp-opt{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,.6);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-sm);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;color:var(--text-soft);-webkit-tap-highlight-color:transparent;}
+.camp-opt input[type=radio]{-webkit-appearance:radio !important;appearance:radio !important;accent-color:var(--gold-d);width:16px;height:16px;cursor:pointer;}
+.camp-opt.selected{background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.45);}
+
+/* CONTADOR */
+.counter-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0;}
+.counter-item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 6px;background:rgba(255,255,255,.6);border:1px solid rgba(201,168,76,.18);border-radius:var(--radius-sm);cursor:pointer;transition:background .2s,border-color .2s;-webkit-tap-highlight-color:transparent;user-select:none;}
+.counter-item.done{background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(228,201,126,.1));border-color:rgba(201,168,76,.5);}
+.counter-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:rgba(201,168,76,.3);line-height:1;transition:color .2s;}
+.counter-item.done .counter-num{color:var(--gold-d);}
+.counter-check{font-size:13px;color:var(--gold);opacity:.22;transition:opacity .2s;}
+.counter-item.done .counter-check{opacity:1;}
+.progress-bar-wrap{margin:14px 0;}
+.progress-label{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--text-muted);letter-spacing:1px;margin-bottom:6px;}
+.progress-track{height:7px;background:rgba(201,168,76,.12);border-radius:50px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold-d),var(--gold-l));border-radius:50px;transition:width .5s ease;}
+
+/* ASSINATURA */
+.sig-row{display:flex;flex-direction:column;gap:10px;}
+.sig-field-wrap{display:flex;flex-direction:column;gap:4px;}
+.sig-lbl{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--text-muted);text-transform:uppercase;}
+.sig-input{background:transparent;border:none;border-bottom:1.5px solid rgba(201,168,76,.28);padding:7px 0;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--text);outline:none;transition:border-color .2s;width:100%;}
+.sig-input:focus{border-bottom-color:var(--gold);}
+
+/* CONCLUSÃO */
+.conclusao-wrap{position:relative;z-index:2;background:linear-gradient(160deg,#f0e2c0 0%,#ecdcc4 40%,#e4d0b4 100%);padding:72px 24px 88px;text-align:center;}
+.conclusao-inner{max-width:600px;margin:0 auto;}
+.conclusao-orn{margin-bottom:22px;}
+.conclusao-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,58px);font-weight:600;color:var(--text);line-height:1.2;margin-bottom:10px;}
+.conclusao-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.conclusao-divider{display:flex;align-items:center;gap:14px;justify-content:center;margin:20px 0;}
+.conclusao-div-line{width:48px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.conclusao-div-line:last-child{background:linear-gradient(90deg,var(--gold),transparent);}
+.conclusao-text{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,3.5vw,24px);font-style:italic;color:var(--text-soft);line-height:1.8;margin-bottom:14px;}
+.conclusao-quote{background:rgba(255,255,255,.55);border:1px solid rgba(201,168,76,.3);border-radius:var(--radius);padding:22px 28px;margin:24px 0;}
+.conclusao-quote-text{font-family:'Playfair Display',serif;font-size:clamp(17px,3vw,20px);font-weight:700;color:var(--text);line-height:1.6;}
+.conclusao-quote-text em{color:var(--gold-d);font-style:italic;}
+.reflexao-block{background:linear-gradient(135deg,rgba(255,252,248,.97),rgba(247,240,228,.94));border:1px solid rgba(201,168,76,.22);border-radius:var(--radius);padding:26px;margin:30px 0;text-align:left;box-shadow:var(--shadow-sm);}
+.reflexao-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--text);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.reflexao-items{display:flex;flex-direction:column;gap:14px;}
+.reflexao-item{display:flex;flex-direction:column;gap:5px;}
+.reflexao-q{font-size:14px;font-weight:700;color:var(--gold-d);letter-spacing:.5px;}
+.reflexao-a{background:rgba(255,255,255,.6);border:none;border-bottom:1.5px solid rgba(201,168,76,.22);padding:7px 2px;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--text);outline:none;transition:border-color .2s;width:100%;}
+.reflexao-a:focus{border-bottom-color:var(--gold);}
+.compromisso-block{background:linear-gradient(135deg,rgba(247,238,216,.9),rgba(240,226,192,.85));border:1px solid rgba(201,168,76,.3);border-top:2px solid var(--gold);border-radius:var(--radius);padding:24px;margin:18px 0;text-align:left;}
+.comp-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;}
+.comp-text{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--text-soft);line-height:1.65;margin-bottom:14px;}
+.carinho{margin-top:36px;font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--gold-d);letter-spacing:1px;}
+.carinho strong{font-weight:700;color:var(--gold-d);}
+
+/* SOCIAL + FOOTER */
+.social-section{position:relative;z-index:2;background:var(--bege2);padding:52px 24px;text-align:center;border-top:1px solid rgba(201,168,76,.15);}
+.social-inner{max-width:400px;margin:0 auto;}
+.social-pretitle{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--text-muted);letter-spacing:2px;margin-bottom:26px;}
+.social-icons{display:flex;justify-content:center;gap:18px;margin-bottom:10px;}
+.social-link{display:flex;flex-direction:column;align-items:center;gap:9px;text-decoration:none;padding:18px 26px;background:linear-gradient(135deg,rgba(255,252,248,.95),rgba(247,238,216,.92));border:1px solid rgba(201,168,76,.28);border-radius:var(--radius);transition:transform .3s ease,box-shadow .3s ease,border-color .3s;min-width:115px;cursor:pointer;-webkit-tap-highlight-color:transparent;box-shadow:var(--shadow-sm);}
+.social-link:hover,.social-link:active{transform:translateY(-4px);box-shadow:0 14px 36px rgba(138,104,32,.13);border-color:rgba(201,168,76,.5);}
+.social-icon-wrap{width:28px;height:28px;}
+.social-label-txt{font-size:11px;letter-spacing:3px;font-weight:700;color:var(--gold-d);text-transform:uppercase;}
+.footer{position:relative;z-index:2;background:var(--bege2);text-align:center;padding:22px 24px 48px;border-top:1px solid rgba(201,168,76,.12);}
+.footer-div{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 16px;}
+.footer-name{font-family:'Playfair Display',serif;font-size:29px;font-style:italic;color:var(--gold-d);}
+.footer-tagline{font-size:11px;letter-spacing:3px;color:var(--text-muted);text-transform:uppercase;margin-top:6px;}
+.footer-copy{font-size:12px;color:var(--text-muted);margin-top:10px;letter-spacing:.5px;}
+
+/* BANNER UNIVERSO BEAUTER */
+.universo-banner-wrap{position:relative;z-index:2;padding:52px 24px;background:linear-gradient(150deg,#fdf5ec 0%,#f7eed8 35%,#f0e2c0 70%,#ecdcc4 100%);overflow:hidden;border-top:1px solid rgba(201,168,76,.18);border-bottom:1px solid rgba(201,168,76,.18);}
+.banner-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.banner-inner{position:relative;z-index:2;max-width:560px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;}
+.banner-corners{position:absolute;inset:18px;pointer-events:none;z-index:1;}
+.bcorner{position:absolute;width:28px;height:28px;border-color:rgba(201,168,76,.45);border-style:solid;}
+.bcorner-tl{top:0;left:0;border-width:1.5px 0 0 1.5px;}
+.bcorner-tr{top:0;right:0;border-width:1.5px 1.5px 0 0;}
+.bcorner-bl{bottom:0;left:0;border-width:0 0 1.5px 1.5px;}
+.bcorner-br{bottom:0;right:0;border-width:0 1.5px 1.5px 0;}
+.banner-eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--text-muted);display:flex;align-items:center;gap:12px;font-style:italic;}
+.banner-line-l,.banner-line-r{display:inline-block;width:30px;height:1px;background:rgba(138,104,32,.28);}
+.banner-title{font-family:'Playfair Display',serif;font-size:clamp(22px,4.5vw,30px);font-weight:700;color:var(--text);line-height:1.3;}
+.banner-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.banner-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,3.5vw,22px);font-style:italic;color:var(--text-soft);line-height:1.65;}
+.banner-sub strong{font-weight:700;font-style:normal;color:var(--gold-d);-webkit-text-fill-color:var(--gold-d);}
+.banner-cta{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#8a6820,#c9a84c 45%,#e4c97e 80%,#c9a84c);color:#2a1c08;padding:16px 38px;border-radius:50px;font-size:13px;letter-spacing:4px;font-weight:700;text-decoration:none;text-transform:uppercase;box-shadow:0 6px 28px rgba(138,104,32,.30),0 2px 8px rgba(201,168,76,.2),inset 0 1px 0 rgba(255,255,255,.3);transition:transform .3s ease,box-shadow .3s ease;animation:bannerPulse 3.2s ease-in-out infinite;margin-top:4px;}
+.banner-cta:hover,.banner-cta:active{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 40px rgba(138,104,32,.38),0 0 0 6px rgba(201,168,76,.1);}
+@keyframes bannerPulse{0%,100%{box-shadow:0 6px 28px rgba(138,104,32,.30),0 2px 8px rgba(201,168,76,.2),inset 0 1px 0 rgba(255,255,255,.3)}50%{box-shadow:0 10px 40px rgba(138,104,32,.45),0 0 0 8px rgba(201,168,76,.12),inset 0 1px 0 rgba(255,255,255,.3)}}
+.banner-footer-text{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--text-muted);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<canvas id="sparkle-canvas"></canvas>
+
+<!-- SPLASH -->
+<div id="splash">
+  <canvas id="splash-canvas"></canvas>
+  <div class="spl">
+    <div class="spl-orn">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+        <path d="M22 4 L24.5 18 L38 14 L28 24 L38 34 L24.5 28 L22 42 L19.5 28 L6 34 L16 24 L6 14 L19.5 18 Z" stroke="#c9a84c" stroke-width="1" fill="rgba(201,168,76,.12)"/>
+      </svg>
+    </div>
+    <div class="spl-top">Método DNA Beauter</div>
+    <div class="spl-main">Conquista</div>
+    <div class="spl-divider"><div class="spl-line"></div><span class="spl-gem">✦</span><div class="spl-line"></div></div>
+    <div class="spl-sub">de Clientes Beauter</div>
+    <div class="spl-by">por Angela Moraes</div>
+    <div class="spl-bar"><div class="spl-fill"></div></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orn-row">
+    <svg width="90" height="1" viewBox="0 0 90 1"><line x1="0" y1="0" x2="90" y2="0" stroke="rgba(138,104,32,0.35)" stroke-width="1"/></svg>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1 L8.2 5.8 L13 5.8 L9 8.5 L10.5 13 L7 10 L3.5 13 L5 8.5 L1 5.8 L5.8 5.8 Z" stroke="#c9a84c" stroke-width=".8" fill="rgba(201,168,76,.18)"/></svg>
+    <svg width="90" height="1" viewBox="0 0 90 1"><line x1="0" y1="0" x2="90" y2="0" stroke="rgba(138,104,32,0.35)" stroke-width="1"/></svg>
+  </div>
+  <p class="hero-eyebrow">Aprendi a técnica… mas como consigo clientes?</p>
+  <div class="hero-title-wrap">
+    <div class="hero-t1">Conquista</div>
+    <div class="hero-t2"><span class="hero-t2-de">de </span><span class="hero-t2-clientes">Clientes</span></div>
+    <div class="hero-t3">Beauter</div>
+  </div>
+  <div class="hero-divider">
+    <div class="hero-div-line"></div><span class="hero-div-gem">✦</span><div class="hero-div-line"></div>
+  </div>
+  <p class="hero-sub">Mesmo começando do zero</p>
+  <p class="hero-by">Método DNA Beauter &nbsp;·&nbsp; por Angela Moraes</p>
+  <div class="hero-badge">
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1L5.9 4H9L6.5 5.8L7.5 9L5 7L2.5 9L3.5 5.8L1 4H4.1Z" fill="white" opacity=".8"/></svg>
+    10 Módulos + Plano de Ação
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1L5.9 4H9L6.5 5.8L7.5 9L5 7L2.5 9L3.5 5.8L1 4H4.1Z" fill="white" opacity=".8"/></svg>
+  </div>
+  <div class="hero-pillars">
+    <div class="pillar">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L9 6.5H13.5L10 9L11.5 14L8 11.5L4.5 14L6 9L2.5 6.5H7Z" stroke="#8a6820" stroke-width=".8" fill="rgba(138,104,32,.12)"/></svg>
+      <span class="pillar-label">Essência</span>
+    </div>
+    <div class="pillar">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="#8a6820" stroke-width=".8" fill="rgba(138,104,32,.08)"/><circle cx="8" cy="8" r="2" fill="rgba(138,104,32,.25)"/></svg>
+      <span class="pillar-label">Posicionamento</span>
+    </div>
+    <div class="pillar">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3C8 3 11 6 11 9C11 11 9.7 12.5 8 12.5C6.3 12.5 5 11 5 9C5 6 8 3 8 3Z" stroke="#8a6820" stroke-width=".8" fill="rgba(138,104,32,.1)"/></svg>
+      <span class="pillar-label">Movimento</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="intro">
+    <div class="intro-box">
+      <div class="intro-title">Aprender uma técnica é apenas o primeiro passo.</div>
+      <div class="intro-text">
+        Muitas profissionais fazem cursos, compram materiais, treinam bastante… mas continuam com a agenda vazia.<br><br>
+        Isso acontece porque quase ninguém ensina algo essencial: <strong>como atrair clientes.</strong><br><br>
+        Este guia foi criado para isso. Clique em cada módulo para acessar o conteúdo e os exercícios.
+      </div>
+    </div>
+  </div>
+  <div class="modules-wrap">
+    <div class="section-label">✦ &nbsp; Módulos do Guia &nbsp; ✦</div>
+    <div id="modList"></div>
+  </div>
+</div>
+
+<!-- CONCLUSÃO -->
+<div class="conclusao-wrap">
+  <div class="conclusao-inner">
+    <div class="conclusao-orn">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M24 5 L27 20.5 L42 16 L31 27 L42 38 L27 32 L24 47 L21 32 L6 38 L17 27 L6 16 L21 20.5 Z" stroke="#8a6820" stroke-width="1" fill="rgba(138,104,32,.1)"/>
+      </svg>
+    </div>
+    <div class="conclusao-title">O início da sua <em>agenda cheia</em> começa agora</div>
+    <div class="conclusao-divider">
+      <div class="conclusao-div-line"></div><span style="color:var(--gold);font-size:10px;">✦</span><div class="conclusao-div-line"></div>
+    </div>
+    <div class="conclusao-text">
+      Se você chegou até aqui, já percebeu algo muito importante:<br>
+      Conquistar clientes não depende apenas de sorte.<br>
+      <strong style="color:var(--text);">Depende de movimento.</strong>
+    </div>
+    <div class="conclusao-text">
+      Clientes existem. Oportunidades existem. O mercado existe.<br>
+      O que muitas vezes falta é apenas uma decisão.<br><br>
+      A decisão de parar de esperar… e começar a se posicionar como profissional.
+    </div>
+    <div class="conclusao-quote">
+      <div class="conclusao-quote-text">"Grandes profissionais não nasceram com agendas cheias.<br>Elas começaram com medo, com poucos clientes, com dúvidas.<br>Mas fizeram algo diferente: <em>elas continuaram.</em>"</div>
+    </div>
+    <div class="conclusao-text">
+      Cada cliente atendida virou experiência.<br>Cada resultado virou divulgação.<br>Cada indicação virou uma nova oportunidade.<br><br>
+      E com o tempo, algo começou a mudar.<br>O que antes era silêncio… se transformou em agenda cheia.
+    </div>
+    <div class="conclusao-quote">
+      <div class="conclusao-quote-text">Agenda cheia não acontece de repente.<br>Ela é construída <em>cliente por cliente.</em></div>
+    </div>
+
+    <div class="reflexao-block">
+      <div class="reflexao-title">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1L7.8 5.5L12.5 5.5L8.8 8L10.2 12.5L6.5 9.8L2.8 12.5L4.2 8L0.5 5.5H5.2Z" stroke="#8a6820" stroke-width=".8" fill="rgba(138,104,32,.15)"/></svg>
+        Reflexão Final
+      </div>
+      <div class="reflexao-items">
+        <div class="reflexao-item"><span class="reflexao-q">O que mais te impede hoje de mostrar seu trabalho?</span><input class="reflexao-a" type="text" placeholder="escreva aqui…"></div>
+        <div class="reflexao-item"><span class="reflexao-q">Qual foi o maior aprendizado deste guia?</span><input class="reflexao-a" type="text" placeholder="escreva aqui…"></div>
+        <div class="reflexao-item"><span class="reflexao-q">Qual estratégia você pode aplicar ainda esta semana?</span><input class="reflexao-a" type="text" placeholder="escreva aqui…"></div>
+        <div class="reflexao-item"><span class="reflexao-q">Qual serviço você quer ser conhecida por fazer muito bem?</span><input class="reflexao-a" type="text" placeholder="escreva aqui…"></div>
+        <div class="reflexao-item"><span class="reflexao-q">Quantas clientes você quer conquistar nos próximos 30 dias?</span><input class="reflexao-a" type="text" placeholder="escreva aqui…"></div>
+      </div>
+    </div>
+
+    <div class="compromisso-block">
+      <div class="comp-title">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style="margin-right:6px;vertical-align:middle;"><path d="M5.5 1L6.5 4.2H10L7.3 6.1L8.4 9.5L5.5 7.5L2.6 9.5L3.7 6.1L1 4.2H4.5Z" stroke="#8a6820" stroke-width=".8" fill="rgba(138,104,32,.15)"/></svg>
+        Meu Compromisso com Minha Carreira
+      </div>
+      <div class="comp-text">"Eu decido acreditar no meu trabalho e me movimentar todos os dias para construir minha agenda."</div>
+      <div class="sig-row">
+        <div class="sig-field-wrap"><span class="sig-lbl">Escreva seu compromisso</span><textarea class="write-field" rows="3" placeholder="Escreva seu compromisso aqui…"></textarea></div>
+        <div class="sig-field-wrap" style="margin-top:12px;"><span class="sig-lbl">Assinatura</span><input class="sig-input" type="text" placeholder="Seu nome"></div>
+        <div class="sig-field-wrap" style="margin-top:8px;"><span class="sig-lbl">Data</span><input class="sig-input" type="text" placeholder="__/__/____"></div>
+      </div>
+    </div>
+
+    <div class="conclusao-quote" style="margin-top:28px;">
+      <div class="conclusao-quote-text">
+        A partir de hoje, você não é apenas uma profissional que aprendeu uma técnica.<br>
+        Você é uma profissional que <em>decidiu construir sua própria história.</em><br><br>
+        E sua agenda cheia começa exatamente assim. Com o primeiro passo.
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style="display:inline-block;margin-left:4px;vertical-align:middle;"><path d="M5.5 1L6.5 4.2H10L7.3 6.1L8.4 9.5L5.5 7.5L2.6 9.5L3.7 6.1L1 4.2H4.5Z" fill="#c9a84c" opacity=".9"/></svg>
+      </div>
+    </div>
+    <div class="carinho" style="margin-top:32px;">com carinho, <strong>Angela Moraes</strong></div>
+  </div>
+</div>
+
+<!-- BANNER UNIVERSO BEAUTER -->
+<div class="universo-banner-wrap">
+  <canvas class="banner-canvas" id="bannerCanvas"></canvas>
+  <div class="banner-corners">
+    <span class="bcorner bcorner-tl"></span>
+    <span class="bcorner bcorner-tr"></span>
+    <span class="bcorner bcorner-bl"></span>
+    <span class="bcorner bcorner-br"></span>
+  </div>
+  <div class="banner-inner">
+    <div class="banner-eyebrow">
+      <span class="banner-line-l"></span>
+      EXCLUSIVO PARA QUEM QUER MAIS
+      <span class="banner-line-r"></span>
+    </div>
+    <div class="banner-title">Só para quem quer se tornar uma<br><em>Profissional Disputada</em></div>
+    <div class="banner-sub">Clique aqui e entre no <strong>Universo Beauter</strong> —<br>onde profissionais de elite constroem carreiras extraordinárias</div>
+    <a class="banner-cta" href="https://linktr.ee/universo_digitalbyangela" target="_blank" rel="noopener" onclick="try{window.open(this.href,'_blank');}catch(e){}return false;">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1L5.9 4H9L6.5 5.8L7.5 9L5 7L2.5 9L3.5 5.8L1 4H4.1Z" fill="#3a2c1a" opacity=".8"/></svg>
+      QUERO ENTRAR AGORA
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1L5.9 4H9L6.5 5.8L7.5 9L5 7L2.5 9L3.5 5.8L1 4H4.1Z" fill="#3a2c1a" opacity=".8"/></svg>
+    </a>
+    <div class="banner-footer-text">A SUA TRANSFORMAÇÃO COMEÇA AQUI</div>
+  </div>
+</div>
+
+<!-- SOCIAL -->
+<div class="social-section">
+  <div class="social-inner">
+    <div class="social-pretitle">Siga Angela Moraes</div>
+    <div class="social-icons">
+      <a class="social-link" href="https://www.instagram.com/angelamoraesstudio?igsh=MXg0MzJ0aTZtMTZkbw==" target="_blank" rel="noopener" onclick="try{window.open(this.href,'_blank');}catch(e){}return false;">
+        <div class="social-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <defs>
+              <linearGradient id="igG" x1="2.5" y1="2.5" x2="21.5" y2="21.5" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8a6820"/><stop offset="100%" stop-color="#e4c97e"/></linearGradient>
+            </defs>
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="url(#igG)" stroke-width="1.3" fill="none"/>
+            <circle cx="12" cy="12" r="4.2" stroke="url(#igG)" stroke-width="1.3" fill="none"/>
+            <circle cx="17.2" cy="6.8" r="1.1" fill="#c9a84c" opacity=".8"/>
+          </svg>
+        </div>
+        <span class="social-label-txt">Instagram</span>
+      </a>
+      <a class="social-link" href="https://www.tiktok.com/@angela.moraes27?_r=1&_t=ZS-94dvO39eg8D" target="_blank" rel="noopener" onclick="try{window.open(this.href,'_blank');}catch(e){}return false;">
+        <div class="social-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <defs>
+              <linearGradient id="ttG" x1="2.5" y1="2.5" x2="21.5" y2="21.5" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8a6820"/><stop offset="100%" stop-color="#e4c97e"/></linearGradient>
+            </defs>
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="url(#ttG)" stroke-width="1.3" fill="none"/>
+            <path d="M14.5 7C14.5 7 14.8 9.5 17 10V12C17 12 15.2 12 14 11V16C14 18.2 12.2 19.5 10.5 19.5C8.5 19.5 7 18 7 16C7 14 8.5 12.5 10.5 12.5C10.8 12.5 11 12.5 11 12.5V14.5C11 14.5 10.8 14.5 10.5 14.5C9.7 14.5 9 15.2 9 16C9 16.8 9.7 17.5 10.5 17.5C11.3 17.5 12 16.8 12 16V7H14.5Z" stroke="url(#ttG)" stroke-width="1.1" fill="none"/>
+          </svg>
+        </div>
+        <span class="social-label-txt">TikTok</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-div"></div>
+  <div class="footer-name">Angela Moraes</div>
+  <div class="footer-tagline">Método DNA Beauter</div>
+  <div class="footer-copy">por Angela Moraes · Todos os direitos reservados</div>
+</div>
+
+<script>
+const orn = `<svg width="9" height="9" viewBox="0 0 9 9" fill="none" style="flex-shrink:0;margin-top:1px"><path d="M4.5 1L5.3 3.7H8L5.9 5.3L6.7 8L4.5 6.3L2.3 8L3.1 5.3L1 3.7H3.7Z" fill="#c9a84c" opacity=".75"/></svg>`;
+
+const modulos = [
+  {num:"01",tag:"Introdução",title:"Como conseguir clientes na beleza — <em>mesmo começando do zero</em>",sub:"O que separa quem tem agenda cheia de quem espera",html:`
+    <div class="mod-intro-text">Aprender uma técnica é apenas o primeiro passo na área da beleza.<br><br>Muitas profissionais fazem cursos, compram materiais, treinam bastante… mas continuam com a agenda vazia.<br><br>Isso acontece porque quase ninguém ensina algo essencial: como atrair clientes.<br><br>Você pode fazer a melhor progressiva do mundo. Mas se ninguém souber que você faz… ninguém vai marcar horário.<br><br>Por isso este guia foi criado.<br><br>Aqui você vai aprender estratégias simples e inteligentes para:<br><br>• conquistar suas primeiras clientes<br>• criar divulgação natural<br>• transformar cada atendimento em novas oportunidades</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Os três pilares DNA Beauter</span><div class="insight-text"><em>Essência</em> &nbsp;·&nbsp; <em>Posicionamento</em> &nbsp;·&nbsp; <em>Movimento</em><br><br>Quando esses três elementos se encontram, a agenda começa a mudar.</div></div>
+  `},
+  {num:"02",tag:"Módulo 1",title:"Comece com quem está <em>perto de você</em>",sub:"Família e amigas são seu primeiro campo de prática",html:`
+    <div class="mod-intro-text">Se você ainda não tem clientes, precisa entender uma coisa:<br><br>Você não precisa esperar desconhecidas para começar.<br><br>Você pode começar com quem já confia em você.<br><br>Família e amigas são o seu primeiro campo de prática e crescimento.</div>
+    <div class="items-list"><span class="items-label">Como colocar em prática</span>
+    <div class="mod-intro-text" style="margin-bottom:0;">Convide pessoas próximas para serem suas "modelos". Pode ser:</div>
+    ${["Irmã","Prima","Amiga","Vizinha","Colega"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Explique que você está em fase de evolução e quer praticar.<br><br>Se você ainda não consegue atender gratuitamente, pode cobrar um valor simbólico apenas para ajudar nos materiais.<br><br>Mas se você tiver condições… ofereça gratuitamente.<br><br>Porque nesse momento, o mais importante não é o dinheiro. É a prática.</div>
+    <div class="items-list"><span class="items-label">O verdadeiro objetivo</span>
+    <div class="mod-intro-text" style="margin-bottom:0;">Esses atendimentos não são apenas para ajudar alguém. Eles são para você:</div>
+    ${["Praticar","Errar e aprender","Ganhar confiança","Melhorar sua técnica","E principalmente… praticar muito"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">No começo, seu maior investimento não é dinheiro.<br><em>É prática.</em></div></div>
+    <div class="items-list"><span class="items-label">O segredo não é só atender</span>
+    <div class="mod-intro-text" style="margin-bottom:0;">O erro de muitas profissionais é atender… e parar por aí. Você precisa transformar cada atendimento em divulgação.</div>
+    ${["Tire fotos do antes e depois","Grave vídeos do processo","Mostre detalhes","Registre o resultado final"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Depois do atendimento, peça algo simples:<br><br><em>"Amiga, você pode postar nos seus stories e me marcar?"</em><br><br>Isso faz com que você alcance pessoas que já confiam nela, que nunca viram seu trabalho e podem virar suas próximas clientes.</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Divulgação Inteligente</span><div class="insight-text">Quando ela postar: reposte no seu story, agradeça e valorize o resultado.<br><br>Isso cria algo poderoso: <em>prova social.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Liste 5 pessoas próximas que você pode atender essa semana</div>
+      <div class="write-fields-row">${[1,2,3,4,5].map(n=>`<div class="write-entry"><span class="write-num">${n}</span><input class="write-input" type="text" placeholder="nome da pessoa…"></div>`).join('')}</div>
+      <span class="write-label" style="margin-top:14px">Agora escreva a mensagem que você vai enviar</span>
+      <textarea class="write-field" rows="3" placeholder="escreva a mensagem aqui…" style="width:100%;border-radius:var(--radius-sm);margin-top:6px;"></textarea>
+      <span class="write-label" style="margin-top:14px">Quando você vai começar?</span>
+      <input class="write-input" type="text" placeholder="escreva a data aqui…" style="width:100%">
+    </div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Fechamento do Módulo</span><div class="insight-text">Grandes profissionais não começam perfeitas.<br><em>Elas começam praticando.</em><br><br>Aproveitando cada oportunidade. E evoluindo a cada atendimento.<br><br>Comece com quem está perto. Pratique. E deixe o seu crescimento aparecer. 🚀</div></div>
+  `},
+  {num:"03",tag:"Módulo 2",title:"Clientes estão em <em>todos os lugares</em>",sub:"Transforme sua rotina em oportunidades",html:`
+    <div class="mod-intro-text">Muitas profissionais acreditam que clientes só aparecem nas redes sociais. Mas a verdade é que clientes estão em todos os lugares que você frequenta no seu dia a dia.</div>
+    <div class="items-list"><span class="items-label">Onde encontrar clientes</span>${["Escola do filho","Mercado","Farmácia","Posto de saúde","Academia","Igreja","Eventos de família","Grupos de WhatsApp"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Todos esses ambientes podem se transformar em oportunidades.<br><br>Você não precisa vender de forma forçada. Basta falar naturalmente sobre o seu trabalho.</div>
+    <div class="example-block"><span class="example-label" style="display:flex;align-items:center;gap:6px">${orn} Exemplo de frase natural</span><div class="example-text">"Estou atendendo com progressiva e estou com uma condição especial para novas clientes."<br><br>Uma frase simples pode despertar interesse. E muitas mulheres podem pensar naquele momento: "Eu estava mesmo precisando cuidar do meu cabelo."</div></div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Profissionais disputadas não ficam esperando clientes. Elas se tornam <em>visíveis.</em><br><br>Quanto mais pessoas sabem o que você faz, maiores são suas chances de ser procurada.</div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Marque os lugares onde você pode falar sobre seu trabalho</div>
+      <div class="check-list">${["Escola do filho","Mercado","Farmácia","Posto de saúde","Igreja","Academia","Família","Vizinhança","Grupos de WhatsApp"].map(item=>`<label class="check-item"><input type="checkbox"><label>${item}</label></label>`).join('')}</div>
+      <span class="write-label">Escreva 3 lugares onde vai começar</span>
+      <div class="write-fields-row">${[1,2,3].map(n=>`<div class="write-entry"><span class="write-num">${n}</span><input class="write-input" type="text" placeholder="escreva aqui…"></div>`).join('')}</div>
+    </div>
+  `},
+  {num:"04",tag:"Módulo 3",title:"Parcerias com <em>comércios locais</em>",sub:"Como usar negócios do bairro para atrair clientes",html:`
+    <div class="mod-intro-text">Uma estratégia muito inteligente para quem está começando é criar parcerias com comércios locais.<br><br>Isso funciona porque esses lugares já têm algo muito valioso: confiança das clientes.<br><br>Se uma dona de loja indica você, a cliente já chega com mais segurança.</div>
+    <div class="items-list"><span class="items-label">Comércios ideais para parcerias</span>${["Lojas de roupas","Lojas de cosméticos","Academias","Clínicas de estética","Esmalterias","Lojas de bijuterias"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="example-block"><span class="example-label" style="display:flex;align-items:center;gap:6px">${orn} Como propor a parceria</span><div class="example-text">"Estou começando meu trabalho com progressiva e gostaria de oferecer um atendimento para você conhecer meu trabalho. Se gostar, pode indicar para suas clientes."<br><br>Se ela gostar do resultado, a chance de indicação aumenta muito.</div></div>
+    <div class="mod-intro-text">Estratégia extra: deixe no local cartões de visita, cupons de desconto e seu WhatsApp. Assim, quando alguma cliente comentar sobre cabelo, a dona da loja pode indicar você.</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Indicações de parceiros são poderosas porque a <em>confiança já vem junto.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Liste 5 comércios próximos para procurar parceria</div>
+      <div class="write-fields-row">${[1,2,3,4,5].map(n=>`<div class="write-entry"><span class="write-num">${n}</span><input class="write-input" type="text" placeholder="nome do comércio…"></div>`).join('')}</div>
+      <span class="write-label" style="margin-top:14px">Marque quando visitar</span>
+      <div class="check-list">${["Comércio 1","Comércio 2","Comércio 3","Comércio 4","Comércio 5"].map(item=>`<label class="check-item"><input type="checkbox"><label>${item}</label></label>`).join('')}</div>
+    </div>
+  `},
+  {num:"05",tag:"Módulo 4",title:"Campanha <em>Indique e Ganhe</em>",sub:"Transformando clientes em divulgadoras do seu trabalho",html:`
+    <div class="mod-intro-text">Uma cliente satisfeita pode trazer muitas outras.<br><br>Mas muitas vezes ela esquece de indicar.<br><br>Por isso campanhas de indicação funcionam tão bem.</div>
+    <div class="items-list"><span class="items-label">Exemplos de campanhas</span><div class="item-row"><span class="item-orn">✦</span><span><strong>Indicou 1 amiga</strong> → ganha 10% de desconto</span></div><div class="item-row"><span class="item-orn">✦</span><span><strong>Indicou 2 amigas</strong> → ganha hidratação</span></div><div class="item-row"><span class="item-orn">✦</span><span><strong>Indicou 3 amigas</strong> → ganha escova gratuita</span></div></div>
+    <div class="mod-intro-text">Isso faz com que suas clientes se tornem divulgadoras naturais do seu trabalho.</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Cada cliente feliz pode ser o começo de <em>várias novas clientes.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Escolha qual campanha você vai usar</div>
+      <div class="campanha-options">${["Desconto","Hidratação","Escova","Outro benefício"].map(op=>`<label class="camp-opt" onclick="selectCamp(this)"><input type="radio" name="camp1" value="${op}"><span>${op}</span></label>`).join('')}</div>
+      <span class="write-label">Escreva qual será sua campanha</span>
+      <input class="write-input" type="text" placeholder="ex: Indique uma amiga e ganhe…" style="width:100%">
+    </div>
+  `},
+  {num:"06",tag:"Módulo 5",title:"Campanha <em>Amiga Traz Amiga</em>",sub:"Estratégia para atrair novas clientes rapidamente",html:`
+    <div class="mod-intro-text">Essa estratégia é muito poderosa.<br><br>Quando duas amigas marcam juntas, elas recebem um benefício.</div>
+    <div class="items-list"><span class="items-label">Exemplos</span><div class="item-row"><span class="item-orn">✦</span><span>Duas amigas fazem (seu procedimento) → ganham desconto especial</span></div><div class="item-row"><span class="item-orn">✦</span><span>Duas amigas fazem (seu procedimento) → ganham hidratação gratuita</span></div></div>
+    <div class="items-list"><span class="items-label">Essa estratégia gera</span>${["Movimento","Novas clientes","Divulgação natural"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Pessoas confiam mais quando vão a um serviço <em>com alguém de confiança.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Escolha sua campanha Amiga Traz Amiga</div>
+      <div class="campanha-options">${["Duas amigas ganham desconto","Duas amigas ganham hidratação","Duas amigas ganham escova"].map(op=>`<label class="camp-opt" onclick="selectCamp(this)"><input type="radio" name="camp2" value="${op}"><span>${op}</span></label>`).join('')}</div>
+      <span class="write-label">Escreva o nome da sua campanha</span>
+      <input class="write-input" type="text" placeholder="ex: Amigas no Atendimento…" style="width:100%">
+    </div>
+  `},
+  {num:"07",tag:"Módulo 6",title:"A técnica do <em>café que vira publicidade</em>",sub:"Como transformar um gesto simples em divulgação",html:`
+    <div class="mod-intro-text">Pequenos detalhes criam experiências memoráveis.<br><br>Uma estratégia muito simples é oferecer café para a cliente com um bilhete motivacional.<br><br>Nesse bilhete você escreve uma frase bonita e coloca seu Instagram.</div>
+    <div class="example-block"><span class="example-label" style="display:flex;align-items:center;gap:6px">${orn} Exemplo</span><div class="example-text">"Que seu dia seja tão incrível quanto seu novo cabelo.<br>@seuperfil"<br><br>Muitas clientes tiram foto e postam nos stories. Assim, sem perceber, estão divulgando seu espaço para outras pessoas.</div></div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Marketing inteligente não é apenas anunciar.<br>É criar <em>momentos que as pessoas querem compartilhar.</em></div></div>
+    <div class="items-list"><span class="items-label">Ideias de frases</span></div>
+    <div class="inspiracao-list">
+      <div class="inspiracao-item"><span class="inspiracao-orn">✦</span><span>"Você está mais perto do que imagina. Continue, você vai se orgulhar."</span></div>
+      <div class="inspiracao-item"><span class="inspiracao-orn">✦</span><span>"A sua melhor versão já está em construção. Não pare agora."</span></div>
+      <div class="inspiracao-item"><span class="inspiracao-orn">✦</span><span>"Você merece tudo o que está buscando. Acredite mais em você."</span></div>
+      <div class="inspiracao-item"><span class="inspiracao-orn">✦</span><span>"Grandes coisas começam com pequenos passos. E você já começou."</span></div>
+      <div class="inspiracao-item"><span class="inspiracao-orn">✦</span><span>"O que você sonha também sonha com você. Não desista agora."</span></div>
+    </div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Escreva 3 frases para usar</div>
+      <div class="write-fields-row">${[1,2,3].map(n=>`<div class="write-entry"><span class="write-num">${n}</span><input class="write-input" type="text" placeholder="escreva uma frase…"></div>`).join('')}</div>
+      <span class="write-label" style="margin-top:14px">Plano de ação</span>
+      <div class="check-list">${["Comprar cartões ou papéis","Escrever frases motivacionais","Colocar seu Instagram","Oferecer café para clientes"].map(item=>`<label class="check-item"><input type="checkbox"><label>${item}</label></label>`).join('')}</div>
+    </div>
+  `},
+  {num:"08",tag:"Módulo 7",title:"Transformando clientes em <em>divulgação</em>",sub:"A experiência que faz a cliente falar de você",html:`
+    <div class="mod-intro-text">Depois que você começa a atender, algo poderoso acontece.<br><br>Cada cliente pode se tornar um canal de divulgação.</div>
+    <div class="items-list"><span class="items-label">Algumas atitudes fazem diferença</span>${["Ser pontual","Explicar o processo","Valorizar a cliente","Entregar um resultado caprichado"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Clientes que se sentem especiais falam sobre você.</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Um bom resultado atrai clientes.<br>Mas uma boa <em>experiência cria fãs.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Marque os hábitos que você já pratica</div>
+      <div class="check-list">${["Tirar fotos de antes e depois","Mostrar bastidores","Agradecer a cliente","Postar resultados"].map(item=>`<label class="check-item"><input type="checkbox"><label>${item}</label></label>`).join('')}</div>
+      <span class="write-label">Escreva um novo hábito que vai começar</span>
+      <input class="write-input" type="text" placeholder="escreva aqui…" style="width:100%">
+    </div>
+  `},
+  {num:"09",tag:"Módulo 8",title:"O cupom de desconto que gera <em>engajamento</em>",sub:"Como transformar seus stories em uma máquina de visibilidade",html:`
+    <div class="mod-intro-text">Os stories do Instagram são um dos lugares mais poderosos para gerar conexão e movimento com suas clientes.<br><br>Mas muitas profissionais usam os stories apenas para postar fotos aleatórias.<br><br>Profissionais estratégicas usam os stories para criar expectativa, engajamento e desejo.<br><br>Uma forma muito simples de fazer isso é a estratégia do cupom nos stories.<br><br>Essa técnica funciona porque cria três coisas ao mesmo tempo:</div>
+    <div class="items-list">${["Curiosidade","Engajamento","Oportunidade de venda"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="items-list"><span class="items-label">Como aplicar a estratégia</span><div class="item-row"><span class="item-orn">✦</span><span><strong>De manhã:</strong> story de antecipação — avise que vai liberar um cupom à noite. Isso cria curiosidade.</span></div><div class="item-row"><span class="item-orn">✦</span><span><strong>Ao longo do dia:</strong> poste resultados de clientes, antes e depois, vídeos de atendimento, bastidores e depoimentos</span></div><div class="item-row"><span class="item-orn">✦</span><span><strong>À noite:</strong> libere o cupom com uma regra clara que gere interação</span></div></div>
+    <div class="example-block"><span class="example-label" style="display:flex;align-items:center;gap:6px">${orn} Exemplo — O momento do cupom</span><div class="example-text">"Vou liberar um cupom de desconto de até 15%. Quem comentar EU QUERO primeiro ganha."<br><br>Essa estratégia gera comentários, interação e mais visibilidade no Instagram. E ainda ajuda a fechar novos atendimentos.</div></div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Curiosidade gera atenção.<br>E atenção gera <em>oportunidade de venda.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Marque quando aplicar essa estratégia</div>
+      <div class="check-list">${["Postar story de antecipação pela manhã","Postar resultados ao longo do dia","Mostrar bastidores","Liberar cupom à noite"].map(item=>`<label class="check-item"><input type="checkbox"><label>${item}</label></label>`).join('')}</div>
+      <span class="write-label">Qual desconto você pretende usar?</span>
+      <input class="write-input" type="text" placeholder="ex: 15%…" style="width:100%">
+      <span class="write-label">Frase que vai usar no story</span>
+      <input class="write-input" type="text" placeholder="escreva aqui…" style="width:100%">
+    </div>
+  `},
+  {num:"10",tag:"Módulo 9",title:"O poder das <em>histórias</em> nos stories",sub:"Como criar conexão verdadeira com suas clientes",html:`
+    <div class="mod-intro-text">As pessoas não se conectam apenas com serviços.<br><br>Elas se conectam com histórias.<br><br>Por isso, uma estratégia muito poderosa é usar seus stories para contar pequenas histórias de clientes.<br><br>Essas histórias mostram situações reais que muitas mulheres vivem.<br><br>E quando alguém se identifica com a história, o interesse pelo seu trabalho aumenta.</div>
+    <div class="example-block"><span class="example-label" style="display:flex;align-items:center;gap:6px">${orn} Exemplo de história</span><div class="example-text">Você pode contar algo assim:<br><br>"Uma cliente minha sempre saía do salão com a unha borrada porque o esmalte demorava muito para secar.<br>Ela não acreditava que o esmalte em gel realmente secava na hora.<br>Até que eu convenci ela a testar.<br>Quando terminou, ela ficou chocada porque já saiu usando o celular sem medo de borrar."<br><br>Histórias assim fazem com que outras pessoas pensem:<br><br>"Isso acontece comigo também."<br><br>E isso cria conexão.</div></div>
+    <div class="items-list"><span class="items-label">Como criar suas próprias histórias</span>
+    <div class="mod-intro-text" style="margin-bottom:0;">Observe situações reais que acontecem no seu dia a dia. Alguns exemplos:</div>
+    ${["Cliente que tinha medo de progressiva","Cliente que achava que o cabelo não tinha solução","Cliente que não acreditava em determinado serviço"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Transforme essas situações em pequenas histórias nos stories.</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Histórias conectam.<br>Quando uma cliente se identifica com uma história, ela começa a <em>confiar em você.</em></div></div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Exercício</span>
+      <div class="exercise-title">Pense em 3 situações reais que aconteceram com clientes</div>
+      <div class="write-fields-row">${[1,2,3].map(n=>`<div class="write-entry"><span class="write-num">${n}</span><input class="write-input" type="text" placeholder="descreva a situação…"></div>`).join('')}</div>
+      <span class="write-label" style="margin-top:14px">Escreva um pequeno resumo de uma história que você poderia contar nos stories</span>
+      <textarea class="write-field" rows="4" placeholder="escreva sua história aqui…" style="width:100%;border-radius:var(--radius-sm);margin-top:6px;"></textarea>
+    </div>
+  `},
+  {num:"11",tag:"Módulo 10 · Missão Final",title:"O Método das Primeiras <em>20 Clientes</em>",sub:"A estratégia para tirar sua agenda do zero",html:`
+    <div class="mod-intro-text">Uma das fases mais difíceis para quem começa na área da beleza é conquistar as primeiras clientes.<br><br>Muitas profissionais desanimam nesse momento porque sentem que ninguém está procurando seus serviços.<br><br>Mas existe algo que você precisa entender:<br><br>Todo profissional disputado um dia começou do zero.<br><br>A diferença é que algumas pessoas ficam esperando clientes aparecerem. Outras criam um plano para conquistar suas primeiras oportunidades.<br><br>O método das primeiras 20 clientes é exatamente isso. Um plano simples para gerar movimento e criar as primeiras provas do seu trabalho.</div>
+    <div class="items-list"><span class="items-label">Por que 20 clientes?</span>
+    <div class="mod-intro-text" style="margin-bottom:0;">Porque quando você atende 20 pessoas, várias coisas começam a acontecer:</div>
+    ${["Você ganha prática","Você gera fotos de resultados","Você ganha depoimentos","Você cria indicações"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Ou seja, as primeiras 20 clientes criam uma base de crescimento.<br><br>Depois disso, conquistar novas clientes se torna muito mais fácil.</div>
+    <div class="items-list"><span class="items-label">Como conquistar suas primeiras 20 clientes</span>
+    <div class="mod-intro-text" style="margin-bottom:0;">Use uma combinação das estratégias que você aprendeu neste guia:</div>
+    ${["Falar sobre seu trabalho nos lugares que frequenta","Criar parcerias com comércios locais","Campanhas de indicação","Cupons de desconto nos stories","Mostrar resultados no Instagram"].map(i=>`<div class="item-row"><span class="item-orn">✦</span><span>${i}</span></div>`).join('')}</div>
+    <div class="mod-intro-text">Cada pequena ação gera novas oportunidades. E com constância, as primeiras clientes começam a aparecer.</div>
+    <div class="insight-block"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Insight</span><div class="insight-text">Clientes atraem clientes.<br>Quanto mais pessoas você atende, <em>mais fácil se torna atrair novas.</em></div></div>
+    <div class="mod-intro-text" style="text-align:center;"><strong>A missão das 20 clientes</strong><br><br>Seu objetivo agora é simples: conquistar suas primeiras 20 clientes.<br><br>Não pense em mil clientes. Pense apenas nas primeiras vinte.</div>
+    <div class="exercise-block">
+      <span class="exercise-tag" style="display:flex;align-items:center;gap:6px">${orn} Missão — Suas 20 Clientes</span>
+      <div class="exercise-title">Marque cada cliente atendida</div>
+      <div class="counter-grid">${Array.from({length:20},(_,i)=>`<div class="counter-item" onclick="toggleCounter(this)"><span class="counter-num">${String(i+1).padStart(2,'0')}</span><span class="counter-check">✦</span></div>`).join('')}</div>
+      <div class="progress-bar-wrap"><div class="progress-label"><span>Progresso</span><span id="counter-pct">0 / 20</span></div><div class="progress-track"><div class="progress-fill" id="counter-bar" style="width:0%"></div></div></div>
+      <span class="write-label" style="margin-top:14px">Registre seus resultados — marque quando fizer isso</span>
+      <div class="check-list">${["Tirei foto do antes e depois","Gravei vídeo do resultado","Pedi depoimento da cliente","Postei o resultado"].map(item=>`<label class="check-item"><input type="checkbox"><label>${item}</label></label>`).join('')}</div>
+      <div class="insight-block" style="margin-top:16px;"><span class="insight-label" style="display:flex;align-items:center;gap:6px">${orn} Compromisso</span><div class="insight-text">Agenda cheia não começa cheia.<br><em>Ela começa com uma cliente de cada vez.</em></div></div>
+      <div class="sig-row" style="margin-top:14px;">
+        <div class="sig-field-wrap"><span class="sig-lbl">Assinatura</span><input class="sig-input" type="text" placeholder="Seu nome"></div>
+        <div class="sig-field-wrap" style="margin-top:8px;"><span class="sig-lbl">Data</span><input class="sig-input" type="text" placeholder="__/__/____"></div>
+      </div>
+    </div>
+  `}
+];
+
+function renderModulos(){
+  const list = document.getElementById('modList');
+  modulos.forEach(m=>{
+    const item = document.createElement('div');
+    item.className = 'mod-item';
+    item.innerHTML = `
+      <button class="mod-btn" onclick="toggleMod(this)" aria-expanded="false">
+        <div class="mod-btn-accent"></div>
+        <div class="mod-btn-inner">
+          <span class="mod-num">${m.num}</span>
+          <div class="mod-text">
+            <span class="mod-tag">${m.tag}</span>
+            <div class="mod-title">${m.title}</div>
+            ${m.sub?`<span class="mod-sub">${m.sub}</span>`:''}
+          </div>
+          <span class="mod-arrow">›</span>
+        </div>
+      </button>
+      <div class="mod-body"><div class="mod-content">${m.html}</div></div>
+    `;
+    list.appendChild(item);
+  });
+  // bind checkboxes after render
+  document.querySelectorAll('.check-item').forEach(label=>{
+    const cb = label.querySelector('input[type=checkbox]');
+    if(!cb) return;
+    cb.addEventListener('change',()=>label.classList.toggle('checked',cb.checked));
+    label.addEventListener('click',e=>{
+      if(e.target===cb) return;
+      cb.checked=!cb.checked;
+      label.classList.toggle('checked',cb.checked);
+    });
+  });
+}
+
+function toggleMod(btn){
+  const wasOpen=btn.classList.contains('open');
+  document.querySelectorAll('.mod-btn.open').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');});
+  if(!wasOpen){
+    btn.classList.add('open');btn.setAttribute('aria-expanded','true');
+    setTimeout(()=>{const r=btn.getBoundingClientRect();window.scrollTo({top:r.top+window.scrollY-80,behavior:'smooth'});},60);
+  }
+}
+
+function selectCamp(label){
+  const wrap=label.closest('.campanha-options');
+  if(!wrap) return;
+  wrap.querySelectorAll('.camp-opt').forEach(l=>l.classList.remove('selected'));
+  label.classList.add('selected');
+  label.querySelector('input').checked=true;
+}
+
+function toggleCounter(el){
+  el.classList.toggle('done');
+  const done=document.querySelectorAll('.counter-item.done').length;
+  const pct=Math.round((done/20)*100);
+  const bar=document.getElementById('counter-bar');
+  const lbl=document.getElementById('counter-pct');
+  if(bar) bar.style.width=pct+'%';
+  if(lbl) lbl.textContent=done+' / 20';
+}
+
+function initReveal(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:0.06,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.mod-item').forEach((el,i)=>{
+    el.style.transitionDelay=(i*0.055)+'s'; obs.observe(el);
+  });
+}
+
+function initSplashCanvas(){
+  const canvas=document.getElementById('splash-canvas');
+  if(!canvas) return;
+  const ctx=canvas.getContext('2d');
+  let W=canvas.width=canvas.offsetWidth, H=canvas.height=canvas.offsetHeight;
+  const ps=Array.from({length:35},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.5,vx:(Math.random()-.5)*.35,vy:-Math.random()*.55-.2,a:Math.random()*.45+.15,c:['#c9a84c','#e4c97e','#8a6820','#f0e2c0'][Math.floor(Math.random()*4)]}));
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c;ctx.globalAlpha=p.a;ctx.fill();p.x+=p.vx;p.y+=p.vy;if(p.y<-5){p.y=H+5;p.x=Math.random()*W;}});
+    ctx.globalAlpha=1; requestAnimationFrame(draw);
+  }
+  draw();
+  window.addEventListener('resize',()=>{W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;});
+}
+
+function initSparkle(){
+  const canvas=document.getElementById('sparkle-canvas');
+  if(!canvas) return;
+  const ctx=canvas.getContext('2d');
+  const colors=['#c9a84c','#e4c97e','#8a6820','#f7eed8','#dbb84a','#f0d080','#c49a30','#ffe8a0'];
+
+  function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+
+  // Spawn em coordenadas de TELA (viewport), não do documento
+  function spawn(fromBottom){
+    const maxA=Math.random()*0.6+0.4;
+    return{
+      x:Math.random()*window.innerWidth,
+      y:fromBottom ? canvas.height+Math.random()*80 : Math.random()*canvas.height,
+      size:Math.random()*1.5+0.5,
+      speed:Math.random()*0.7+0.2,
+      alpha:maxA,
+      maxAlpha:maxA,
+      c:colors[Math.floor(Math.random()*colors.length)],
+      drift:(Math.random()-0.5)*0.5,
+      wobble:Math.random()*Math.PI*2,
+      wobbleSpeed:Math.random()*0.022+0.006,
+      shape:Math.random()>0.4?'star':'circle',
+      fade:Math.random()*0.0006+0.0003
+    };
+  }
+
+  const NUM=120;
+  const sparks=Array.from({length:NUM},()=>spawn(false));
+
+  function drawStar(x,y,r,a,c){
+    ctx.globalAlpha=a;ctx.fillStyle=c;
+    ctx.beginPath();
+    for(let i=0;i<5;i++){
+      const ang=(i*4*Math.PI/5)-Math.PI/2;
+      const px=x+Math.cos(ang)*r,py=y+Math.sin(ang)*r;
+      i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+    }
+    ctx.closePath();ctx.fill();
+  }
+  function drawCircle(x,y,r,a,c){
+    ctx.globalAlpha=a;ctx.fillStyle=c;
+    ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
+  }
+
+  function anim(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    sparks.forEach(s=>{
+      const sx=s.x+Math.sin(s.wobble)*12;
+      if(s.shape==='star') drawStar(sx,s.y,s.size,s.alpha,s.c);
+      else drawCircle(sx,s.y,s.size*0.75,s.alpha,s.c);
+
+      s.y-=s.speed;
+      s.x+=s.drift;
+      s.wobble+=s.wobbleSpeed;
+      s.alpha-=s.fade;
+
+      // Respawn na base da tela quando sair pelo topo ou ficar transparente
+      if(s.y<-20||s.alpha<=0.02){
+        Object.assign(s,spawn(true));
+      }
+    });
+    requestAnimationFrame(anim);
+  }
+  anim();
+}
+
+function initBannerCanvas(){
+  const canvas=document.getElementById('bannerCanvas');
+  if(!canvas) return;
+  const ctx=canvas.getContext('2d');
+  const colors=['#c9a84c','#e4c97e','#8a6820','#f7eed8','#dbb84a','#f0d080','#ffe8a0'];
+  function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  const ps=Array.from({length:60},()=>({
+    x:Math.random()*canvas.width,y:Math.random()*canvas.height,
+    r:Math.random()*2.5+0.5,vx:(Math.random()-.5)*.3,vy:-Math.random()*.5-.15,
+    a:Math.random()*.6+.15,c:colors[Math.floor(Math.random()*colors.length)],
+    shape:Math.random()>0.4?'star':'circle'
+  }));
+  function drawStar(x,y,r,a,c){
+    ctx.globalAlpha=a;ctx.fillStyle=c;
+    ctx.beginPath();
+    for(let i=0;i<5;i++){const ang=(i*4*Math.PI/5)-Math.PI/2;const px=x+Math.cos(ang)*r,py=y+Math.sin(ang)*r;i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);}
+    ctx.closePath();ctx.fill();
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ps.forEach(p=>{
+      if(p.shape==='star') drawStar(p.x,p.y,p.r,p.a,p.c);
+      else{ctx.globalAlpha=p.a;ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x,p.y,p.r*.7,0,Math.PI*2);ctx.fill();}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.y<-5){p.y=canvas.height+5;p.x=Math.random()*canvas.width;}
+      if(p.x<-5||p.x>canvas.width+5){p.x=Math.random()*canvas.width;p.y=canvas.height+5;}
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  renderModulos(); initSplashCanvas(); initSparkle(); initReveal(); initBannerCanvas();
+  setTimeout(()=>{const s=document.getElementById('splash');if(s)s.classList.add('hidden');},2600);
+});
+</script>
+</body>
+</html>
